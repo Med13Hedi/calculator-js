@@ -1,0 +1,13 @@
+# Railway Deployment Configuration
+# This file tells Railway how to deploy your Node.js application
+
+[build]
+  builder = "NIXPACKS"
+
+[deploy]
+  startCommand = "npm start"
+  healthcheckPath = "/ping"
+  restartPolicyType = "ON_FAILURE"
+
+[env]
+  NODE_ENV = "production"
